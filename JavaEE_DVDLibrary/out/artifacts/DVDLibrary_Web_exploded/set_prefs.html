@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .getTitle{
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .getGenre{
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body>
+<form action="/set_prefs" method="post">
+    <label>Columns to display in list</label>
+    <label><input name="showTitle" type="checkbox" name>title</label>
+    <label><input name="showYear" type="checkbox">year</label>
+    <label><input name="showGenre" type="checkbox">genre</label>
+    <br><br>
+    <button>Set Preferences</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .h1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="h1">
+    <h1  >Add DVD</h1>
+</div>
+
+<form action="/add_dvd.view" method="post">
+
+    Title: <input type="text" name="title"><br><br>
+    Year: <input type="text" name="year"><br><br>
+
+    <p>Genre:
+        <select name="genre" >
+            <option datatype="text" value="Sci-fi">Sci-Fi</option>
+            <option datatype="text" value="Horror">Horror</option>
+            <option datatype="text" value="Adventure">Adventure</option>
+            <option datatype="text" value="Fantasy">Fantasy</option>
+        </select>
+
+        or new genre:  <input type="text" name="newGenre"></p>
+
+    <br><br>
+    <button>Add DVD</button>
+</form>
+</body>
+</html>
