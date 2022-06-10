@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body style='background-image: url("images/8.jpg")'>
+
+<header th:insert="templ/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <div class="alert alert-info mt-2">
+        <div style="margin-left: 30px" th:each="el : ${post}">
+            <h2 th:text="${el.getTitle}"></h2>
+            <p th:text="${el.getFull_text}"></p>
+            <p th:text="'Views: '+${el.getViews}"></p>
+            <a th:href="'/blog/'+${el.getId}+'/edit'" class="btn btn-warning">Edit</a>
+            <form style="margin-bottom: 30px" th:action="@{'/blog/'+${el.getId}+'/remove'}" method="post"><br>
+                <button type="submit" class="btn btn-warning">Remove</button>
+            </form>
+        </div>
+</div>
+</div>
+
+<footer th:insert="templ/footer :: footer" class="site-footer"></footer>
+
+</body>
+</html>
